@@ -69,8 +69,6 @@ export default function MLPredictionPage() {
         mtrans: formData.mtrans!,
       };
 
-      console.log("Request Body:", JSON.stringify(requestBody, null, 2));
-
       const response = await predictionAPI.predict(requestBody);
       setPrediction(response);
     } catch (err) {
